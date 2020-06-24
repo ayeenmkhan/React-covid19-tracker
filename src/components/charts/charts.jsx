@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { fetchDailyData } from '../../apis'
 import { Line, Bar } from 'react-chartjs-2';
 import styles from './charts.module.css'
+
 const Charts = ({ data: {confirmed, recovered, deaths}, country}) => {
     const [dailyData, setDailyData ] = useState([]);
 
@@ -12,7 +13,7 @@ const Charts = ({ data: {confirmed, recovered, deaths}, country}) => {
             setDailyData(data);
         }
         
-        // console.log(dailyData);
+        //  console.log("Daily Data is",dailyData);
         getDailyData();
     },[]);
 

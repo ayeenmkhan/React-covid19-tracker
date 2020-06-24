@@ -22,6 +22,23 @@ export const fetchData = async (country) => {
     }
 }
 
+export const fetchPakistanData = async () => {
+    let country ='pakistan' 
+     let changeableURL = `${url}/countries/${country}`
+    try {
+        const { data: { confirmed, recovered, deaths, lastUpdate } } = await axios.get(changeableURL);
+        const modifiedData = {
+            confirmed,
+            recovered,
+            deaths,
+            lastUpdate
+        }
+        // console.log("Single country data is",modifiedData);
+        return modifiedData
+    } catch (error) {
+        console.log(error);
+    }
+}
 export const fetchDailyData = async () => {
     try {
         const { data } = await axios.get(`${url}/daily`);
