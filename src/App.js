@@ -25,7 +25,7 @@ class App extends React.Component {
     <div className='container'>
       <img src={CoronaImage} className={styles.image} alt='Logo' />
       <header>
-      <img src={HeaderImage} className="header_image" alt='Header Image' width="100%"/>
+      <img src={HeaderImage} className="header_image" alt='Header' width="100%"/>
       </header>
       <Cards data={data}/>
       <Country handleCountryChange={this.handleCountryChange}/>
