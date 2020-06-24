@@ -23,7 +23,7 @@ class App extends React.Component {
    const { data, country }=this.state
   return (
     <div className='container'>
-      <img src={CoronaImage} className={styles.image} alt='Header Image' />
+      <img src={CoronaImage} className={styles.image} alt='Logo' />
       <header>
       <img src={HeaderImage} className="header_image" alt='Header Image' width="100%"/>
       </header>
